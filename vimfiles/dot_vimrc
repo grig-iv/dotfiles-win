@@ -1,0 +1,121 @@
+set vsvimcaret=70		
+
+set relativenumber		
+set number				
+set scrolloff=5			
+set clipboard=unnamed	
+
+set ignorecase			
+set smartcase			
+set hlsearch			
+set incsearch			
+
+let mapleader=" "
+
+" Nopes
+nnoremap <Space> <Nop>
+vnoremap <Space> <Nop>
+
+nnoremap s <Nop>
+nnoremap S <Nop>
+vnoremap s <Nop>
+vnoremap S <Nop>
+
+" General mappings
+nnoremap H ^
+vnoremap H ^
+nnoremap L $
+vnoremap L $
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
+
+nnoremap Q @q
+nnoremap Y y$
+nnoremap U <C-r>
+nnoremap R     :vsc Debug.Start<CR>
+
+onoremap w iw
+onoremap <C-w> w
+
+nnoremap } /^\s*\({\|}\)/e<CR>:noh<CR>
+nnoremap { ?^\s*\({\|}\)?e<CR>:noh<CR>
+vnoremap } /^\s*\({\|}\)/e<CR>:noh<CR>
+vnoremap { ?^\s*\({\|}\)?e<CR>:noh<CR>
+
+nnoremap gg gg:vsc Edit.NextMethod<CR>
+nnoremap G  G:vsc Edit.PreviousMethod<CR>
+
+nnoremap gd :vsc Edit.GoToDefinition<CR>
+nnoremap gi :vsc Edit.GoToImplementation<CR>
+
+nnoremap [m :vsc Edit.PreviousMethod<CR>
+vnoremap [m :vsc Edit.PreviousMethod<CR>jk
+nnoremap ]m :vsc Edit.NextMethod<CR>
+vnoremap ]m :vsc Edit.NextMethod<CR>jk
+
+" Quick actions
+nnoremap <C-s> :vsc Edit.RemoveAndSort<CR>:vsc Edit.FormatDocument<CR>:w<CR>
+imap     <C-s> <Esc><C-s>
+
+nnoremap <C-h> :vsc Window.PreviousTab<CR>
+nnoremap <C-l> :vsc Window.NextTab<CR>
+nnoremap <C-c> :vsc Window.CloseDocumentWindow<CR>
+
+nnoremap <C-r> :vsc Refactor.Rename<CR>
+
+nnoremap <C-i> :vsc Edit.QuickInfo<CR>
+nnoremap <C-p> :vsc Edit.ParameterInfo<CR>
+nnoremap <C-f> :vsc Edit.GoToAll<CR>
+
+nnoremap <C-k> :vsc View.NavigateBackward<CR>
+nnoremap <C-j> :vsc View.NavigateForward<CR>
+
+nnoremap <C-m> :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+
+" Visual studio bindings
+"        <C-a> code actions
+"        <C-t> show diagnostic window
+"        <C-Space> show completion suggestion
+
+" Leaders
+nnoremap <Leader>j J
+nnoremap <Leader>l :noh<CR>
+nnoremap <Leader>s :source c:\Users\User\.vimrc<CR>
+
+nnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
+vnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
+
+nnoremap <Leader>p "0p
+nnoremap <Leader>P "0P
+vnoremap <Leader>p "0p
+vnoremap <Leader>P "0P
+
+nnoremap <Leader>; g_a;<Esc>
+nnoremap <Leader>{ o{<CR>
+
+nnoremap <Leader>rr :vsc Debug.Restart<CR>
+nnoremap <Leader>rs :vsc Debug.StopDebugging<CR>
+
+nnoremap <Leader>to :tabo<CR>
+nnoremap <Leader>tk :vsc Window.KeepTabOpen<CR>
+
+nnoremap <Leader>dn :vsc View.NextError<CR>
+nnoremap <Leader>dp :vsc View.PreviousError<CR>
+
+
+" Build, Run, Debug, Tests
+nnoremap <Leader>dl :vsc Debug.StepOver<CR>
+nnoremap <Leader>dj :vsc Debug.StepInto<CR>
+nnoremap <Leader>dk :vsc Debug.StepOut<CR>
+nnoremap <Leader>dh :vsc Debug.RunToCursor<CR>
+
+nnoremap <Leader>tt :vsc TestExplorer.ShowTestExplorer<CR>
+nnoremap <Leader>ta :vsc TestExplorer.RunAllTests<CR>
+nnoremap <Leader>tf :vsc TestExplorer.RunFailedTests<CR>
+nnoremap <Leader>tl :vsc TestExplorer.RepeatLastRun<CR>
+nnoremap <Leader>tL :vsc TestExplorer.DebugLastRun<CR>
+
+nnoremap <Leader>db :vsc Debug.ToggleBreakpoint<CR>
+nnoremap <Leader>dc :vsc Debug.DeleteAllBreakpoints<CR>
