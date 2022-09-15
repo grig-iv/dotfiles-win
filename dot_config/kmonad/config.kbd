@@ -1,0 +1,97 @@
+#| ------------------------------ TEMPLATE ------------------------------
+
+(deflayer name
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _
+    _     _    _              _                   _    _    _
+)
+
+  ----------------------------------------------------------------------- |#
+
+
+;; ------------------------------ CNF + SRC ------------------------------ ;;
+
+(defcfg
+    input   (low-level-hook)
+    output  (send-event-sink)
+
+    fallthrough true
+)
+
+(defsrc
+    grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    tab   q    w    e    r    t    y    u    i    o    p    [    ]    ent
+    caps  a    s    d    f    g    h    j    k    l    ;    '    \
+    lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+    lctl lmet lalt            spc                 ralt cmp  rctl
+)
+
+
+;; ------------------------------ LAYERS ------------------------------ ;;
+
+(defalias
+    lm  (layer-toggle layer-manager)
+	
+    m   (layer-switch main)
+    b   (layer-switch blank)
+    n   (layer-switch numpad)
+)
+
+(defalias
+    mod (tap-next esc (layer-toggle main-mod))
+    ea  (tap-next ent lalt)
+
+    ;; Launcher
+	;;ln  M-p   ;; Linux
+	ln  A-spc ;; Windows
+	
+	;; Language switcher
+	;;ls  rlat  ;; Linux
+	ls lmet   ;; Windows
+	
+	;; Windows virtual desctop moves
+    pd  C-M-lft
+    nd  C-M-rght
+)
+
+(deflayer main
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    @mod  _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _
+    _     _    @ea            _                   rctl @lm  ralt
+)
+
+(deflayer main-mod
+    _     _    _    _    end  _    _    _    _    _    home _    _    _
+    @ln   _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    lft  down up   rght _    _    _
+    _     _    _    _    _    _    _    _    @pd  @nd  _    _
+    _     @ls  del            bspc                _    _    _
+)
+
+(deflayer layer-manager
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    @b   @n   @m   _    _    _    _
+    _     _    _              _                   _    _    _
+)
+
+(deflayer blank
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _    _
+    _     _    _    _    _    _    _    _    _    _    _    _
+    _     _    _              _                   _    @lm  _
+)
+
+(deflayer numpad
+    _     _    _    _    _    _    _    7    8    9    _    _    _    _
+    _     _    _    _    _    _    _    4    5    6    _    _    _    _
+    _     _    _    _    _    _    _    1    2    3    _    _    _
+    _     _    _    _    _    _    _    _    0    _    _    _
+    _     _    _              _                   _    @lm  _
+)
