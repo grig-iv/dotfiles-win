@@ -34,7 +34,12 @@ vnoremap K {
 nnoremap Q @q
 nnoremap Y y$
 nnoremap U <C-r>
-nnoremap R     :vsc Debug.Start<CR>
+nnoremap R :vsc Debug.Start<CR>
+
+nnoremap . ;
+nnoremap ; .
+vnoremap . ;
+vnoremap ; .
 
 onoremap w iw
 onoremap W iW
@@ -86,7 +91,7 @@ nnoremap <C-j> :vsc View.NavigateForward<CR>
 " Leaders
 nnoremap <Leader>j J
 nnoremap <Leader>l :noh<CR>
-nnoremap <Leader>s :source c:\Users\User\.vimrc<CR>
+nnoremap <Leader>s :source c:\Users\User\vimfiles\vimrc<CR>
 
 nnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
 vnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
