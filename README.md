@@ -5,6 +5,7 @@ Settings for:
 - kmonad
 - wox
 - neovim
+- librewolf
 
 
 *managed with chezmoi*
