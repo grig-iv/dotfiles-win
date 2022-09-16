@@ -42,15 +42,15 @@
 (defalias
     mod (tap-next esc (layer-toggle main-mod))
     ea  (tap-next ent lalt)
+    cs  (tap-next caps rsft)
+
+    src (tap-next (around-next rctl) rctl)
+    srs (tap-next (around-next rsft) rsft)
 
     ;; Launcher
 	;;ln  M-p   ;; Linux
-	ln  A-spc ;; Windows
-	
-	;; Language switcher
-	;;ls  rlat  ;; Linux
-	ls lmet   ;; Windows
-	
+	ln  A-spc   ;; Windows
+
 	;; Windows virtual desctop moves
     pd  C-M-lft
     nd  C-M-rght
@@ -60,16 +60,16 @@
     _     _    _    _    _    _    _    _    _    _    _    _    _    _
     _     _    _    _    _    _    _    _    _    _    _    _    _    _
     @mod  _    _    _    _    _    _    _    _    _    _    _    _
-    _     _    _    _    _    _    _    _    _    _    _    _
-    _     _    @ea            _                   rctl @lm  ralt
+    _     _    _    _    _    _    _    _    _    _    _    @srs
+    _     _    @ea            _                   @src @lm  ralt
 )
 
 (deflayer main-mod
     _     _    _    _    end  _    _    _    _    _    home _    _    _
-    @ln   _    _    _    _    _    _    _    _    _    _    _    _    _
-    _     _    _    _    _    _    lft  down up   rght _    _    _
-    _     _    _    _    _    _    _    _    @pd  @nd  _    _
-    _     @ls  del            bspc                _    _    _
+    @ln   _    _    _    _    _    _    pgup ins  _    _    _    _    _
+    _     _    _    pgdn _    _    lft  down up   rght _    _    _
+    _     _    _    _    _    _    _    _    @pd  @nd  _    @cs
+    _     _    del            bspc                _    _    _
 )
 
 (deflayer layer-manager

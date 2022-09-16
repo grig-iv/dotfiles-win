@@ -1,16 +1,28 @@
-local keymap = vim.api.nvim_set_keymap
-local default_opts = { noremap = true, silent = true }
+local map = function(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
-keymap('', '<up>', ':echoe "Use k"<CR>', { noremap = true, silent = false })
-keymap('', '<down>', ':echoe "Use j"<CR>', { noremap = true, silent = false })
-keymap('', '<left>', ':echoe "Use h"<CR>', { noremap = true, silent = false })
-keymap('', '<right>', ':echoe "Use l"<CR>', { noremap = true, silent = false })
+map('n', 'H', '^')
+map('v', 'H', '^')
+map('n', 'L', '$')
+map('v', 'L', '$')
+map('n', 'J', '}')
+map('v', 'J', '}')
+map('n', 'K', '{')
+map('v', 'K', '{')
 
-keymap('n', '<C-s>', ':w<CR>',  default_opts)
-keymap('i', '<C-s>', '<esc>:w<CR>a', default_opts)
+map('n', 'Q', '@q')
+map('n', 'Y', 'y$')
 
-keymap('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
-keymap('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
+map('n', '<C-s>', '<Esc>:w<CR>')
+map('v', '<C-s>', '<Esc>:w<CR>')
+map('i', '<C-s>', '<Esc>:w<CR>')
 
-keymap('n', '<Leader>ff', '<Cmd>Telescope find_files<CR>', { noremap = true })
+-- utils
+map('n', '<Leader>uj', 'J')
+map('n', '<Leader>ul', ':noh<CR>')
 
