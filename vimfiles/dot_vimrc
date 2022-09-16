@@ -37,7 +37,9 @@ nnoremap U <C-r>
 nnoremap R     :vsc Debug.Start<CR>
 
 onoremap w iw
-onoremap <C-w> w
+onoremap W iW
+onoremap <Leader>w w
+onoremap <Leader>W W
 
 nnoremap } /^\s*\({\|}\)/e<CR>:noh<CR>
 nnoremap { ?^\s*\({\|}\)?e<CR>:noh<CR>
@@ -51,9 +53,9 @@ nnoremap gd :vsc Edit.GoToDefinition<CR>
 nnoremap gi :vsc Edit.GoToImplementation<CR>
 
 nnoremap [m :vsc Edit.PreviousMethod<CR>
-vnoremap [m :vsc Edit.PreviousMethod<CR>jk
 nnoremap ]m :vsc Edit.NextMethod<CR>
-vnoremap ]m :vsc Edit.NextMethod<CR>jk
+nnoremap ]d :vsc View.NextError<CR>
+nnoremap [d :vsc View.PreviousError<CR>
 
 " Quick actions
 nnoremap <C-s> :vsc Edit.RemoveAndSort<CR>:vsc Edit.FormatDocument<CR>:w<CR>
@@ -61,23 +63,25 @@ imap     <C-s> <Esc><C-s>
 
 nnoremap <C-h> :vsc Window.PreviousTab<CR>
 nnoremap <C-l> :vsc Window.NextTab<CR>
-nnoremap <C-c> :vsc Window.CloseDocumentWindow<CR>
+nnoremap <C-q> :vsc Window.CloseDocumentWindow<CR>
 
 nnoremap <C-r> :vsc Refactor.Rename<CR>
 
 nnoremap <C-i> :vsc Edit.QuickInfo<CR>
-nnoremap <C-p> :vsc Edit.ParameterInfo<CR>
-nnoremap <C-f> :vsc Edit.GoToAll<CR>
 
 nnoremap <C-k> :vsc View.NavigateBackward<CR>
 nnoremap <C-j> :vsc View.NavigateForward<CR>
 
-nnoremap <C-m> :vsc SolutionExplorer.SyncWithActiveDocument<CR>
-
 " Visual studio bindings
+"        <C-f> go to type/file/..
 "        <C-a> code actions
-"        <C-t> show diagnostic window
+"        <C-c> close tool window
 "        <C-Space> show completion suggestion
+"
+"        <C-m> show solution explorer
+"        <C-t> show diagnostic window
+"        <C-n>f (se) create folder
+"        <C-n>i (se) create item
 
 " Leaders
 nnoremap <Leader>j J
@@ -93,6 +97,7 @@ vnoremap <Leader>p "0p
 vnoremap <Leader>P "0P
 
 nnoremap <Leader>; g_a;<Esc>
+nnoremap <Leader>, g_a,<Esc>
 nnoremap <Leader>{ o{<CR>
 
 nnoremap <Leader>rr :vsc Debug.Restart<CR>
@@ -100,9 +105,6 @@ nnoremap <Leader>rs :vsc Debug.StopDebugging<CR>
 
 nnoremap <Leader>to :tabo<CR>
 nnoremap <Leader>tk :vsc Window.KeepTabOpen<CR>
-
-nnoremap <Leader>dn :vsc View.NextError<CR>
-nnoremap <Leader>dp :vsc View.PreviousError<CR>
 
 
 " Build, Run, Debug, Tests

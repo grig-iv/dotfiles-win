@@ -1,7 +1,21 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
+local opt = vim.opt
 
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.smartindent = true
+opt.number = true
+opt.relativenumber = true
+opt.clipboard = "unnamed"
+opt.scrolloff = 5
+
+opt.ignorecase = true
+opt.smartcase = true
+opt.incsearch = true
+opt.hlsearch = true
+
+opt.smartindent = true
+opt.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+
+opt.wrap = false
+opt.updatetime = 50
+
+vim.g.mapleader = " "
