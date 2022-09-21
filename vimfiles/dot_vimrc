@@ -1,14 +1,14 @@
-set vsvimcaret=70		
+set vsvimcaret=70
 
-set relativenumber		
-set number				
-set scrolloff=5			
-set clipboard=unnamed	
+set relativenumber
+set number
+set scrolloff=5
+set clipboard=unnamed
 
-set ignorecase			
-set smartcase			
-set hlsearch			
-set incsearch			
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
 
 let mapleader=" "
 
@@ -16,6 +16,13 @@ let mapleader=" "
 nnoremap <Space> <Nop>
 vnoremap <Space> <Nop>
 
+onoremap iw <Nop>
+onoremap iW <Nop>
+
+nnoremap r <Nop>
+nnoremap ri <Nop>
+nnoremap ra <Nop>
+nnoremap r<Leader> <Nop>
 nnoremap s <Nop>
 nnoremap S <Nop>
 vnoremap s <Nop>
@@ -34,12 +41,59 @@ vnoremap K {
 nnoremap Q @q
 nnoremap Y y$
 nnoremap U <C-r>
-nnoremap R :vsc Debug.Start<CR>
 
-nnoremap . ;
-nnoremap ; .
-vnoremap . ;
-vnoremap ; .
+nnoremap rl r
+nnoremap rw viw"0p
+nnoremap rW viW"0p
+nnoremap rL v$h"0p
+nnoremap r<Leader>w ve"0p
+nnoremap r<Leader>W vE"0p
+nnoremap ri" vi""0p
+nnoremap ra" va""0p
+nnoremap ri' vi'"0p
+nnoremap ra' va'"0p
+nnoremap ri} vi}"0p
+nnoremap ra} va}"0p
+nnoremap ri{ vi{"0p
+nnoremap ra{ va{"0p
+nnoremap ri[ vi["0p
+nnoremap ra[ va["0p
+nnoremap ri] vi]"0p
+nnoremap ra] va]"0p
+nnoremap ri( vi("0p
+nnoremap ra( va("0p
+nnoremap ri) vi)"0p
+nnoremap ra) va)"0p
+nnoremap ri< vi<"0p
+nnoremap ra> va>"0p
+nnoremap ra< va<"0p
+nnoremap ri> vi>"0p
+
+nnoremap Rw viwp
+nnoremap RW viWp
+nnoremap RL v$hp
+nnoremap R<Leader>w vep
+nnoremap R<Leader>W vEp
+nnoremap Ri" vi"p
+nnoremap Ra" va"p
+nnoremap Ri' vi'p
+nnoremap Ra' va'p
+nnoremap Ri} vi}p
+nnoremap Ra} va}p
+nnoremap Ri{ vi{p
+nnoremap Ra{ va{p
+nnoremap Ri[ vi[p
+nnoremap Ra[ va[p
+nnoremap Ri] vi]p
+nnoremap Ra] va]p
+nnoremap Ri( vi(p
+nnoremap Ra( va(p
+nnoremap Ri) vi)p
+nnoremap Ra) va)p
+nnoremap Ri< vi<p
+nnoremap Ra> va>p
+nnoremap Ra< va<p
+nnoremap Ri> vi>p
 
 onoremap w iw
 onoremap W iW
@@ -70,7 +124,7 @@ nnoremap <C-h> :vsc Window.PreviousTab<CR>
 nnoremap <C-l> :vsc Window.NextTab<CR>
 nnoremap <C-q> :vsc Window.CloseDocumentWindow<CR>
 
-nnoremap <C-r> :vsc Refactor.Rename<CR>
+nnoremap <C-r> :vsc Debug.Start<CR>
 
 nnoremap <C-i> :vsc Edit.QuickInfo<CR>
 
@@ -91,7 +145,7 @@ nnoremap <C-j> :vsc View.NavigateForward<CR>
 " Leaders
 nnoremap <Leader>j J
 nnoremap <Leader>l :noh<CR>
-nnoremap <Leader>s :source c:\Users\User\vimfiles\vimrc<CR>
+nnoremap <Leader>s :source c:\Users\User\vimfiles\.vimrc<CR>
 
 nnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
 vnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
@@ -104,6 +158,8 @@ vnoremap <Leader>P "0P
 nnoremap <Leader>; g_a;<Esc>
 nnoremap <Leader>, g_a,<Esc>
 nnoremap <Leader>{ o{<CR>
+
+nnoremap <Leader>rn :vsc Refactor.Rename<CR>
 
 nnoremap <Leader>rr :vsc Debug.Restart<CR>
 nnoremap <Leader>rs :vsc Debug.StopDebugging<CR>
