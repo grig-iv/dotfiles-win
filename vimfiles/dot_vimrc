@@ -28,6 +28,8 @@ nnoremap S <Nop>
 vnoremap s <Nop>
 vnoremap S <Nop>
 
+inoremap <C-p> <Nop>
+
 " General mappings
 nnoremap H ^
 vnoremap H ^
@@ -43,57 +45,32 @@ nnoremap Y y$
 nnoremap U <C-r>
 
 nnoremap rl r
-nnoremap rw viw"0p
-nnoremap rW viW"0p
-nnoremap rL v$h"0p
-nnoremap r<Leader>w ve"0p
-nnoremap r<Leader>W vE"0p
-nnoremap ri" vi""0p
-nnoremap ra" va""0p
-nnoremap ri' vi'"0p
-nnoremap ra' va'"0p
-nnoremap ri} vi}"0p
-nnoremap ra} va}"0p
-nnoremap ri{ vi{"0p
-nnoremap ra{ va{"0p
-nnoremap ri[ vi["0p
-nnoremap ra[ va["0p
-nnoremap ri] vi]"0p
-nnoremap ra] va]"0p
-nnoremap ri( vi("0p
-nnoremap ra( va("0p
-nnoremap ri) vi)"0p
-nnoremap ra) va)"0p
-nnoremap ri< vi<"0p
-nnoremap ra> va>"0p
-nnoremap ra< va<"0p
-nnoremap ri> vi>"0p
-
-nnoremap Rw viwp
-nnoremap RW viWp
-nnoremap RL v$hp
-nnoremap R<Leader>w vep
-nnoremap R<Leader>W vEp
-nnoremap Ri" vi"p
-nnoremap Ra" va"p
-nnoremap Ri' vi'p
-nnoremap Ra' va'p
-nnoremap Ri} vi}p
-nnoremap Ra} va}p
-nnoremap Ri{ vi{p
-nnoremap Ra{ va{p
-nnoremap Ri[ vi[p
-nnoremap Ra[ va[p
-nnoremap Ri] vi]p
-nnoremap Ra] va]p
-nnoremap Ri( vi(p
-nnoremap Ra( va(p
-nnoremap Ri) vi)p
-nnoremap Ra) va)p
-nnoremap Ri< vi<p
-nnoremap Ra> va>p
-nnoremap Ra< va<p
-nnoremap Ri> vi>p
+nnoremap R  v$hp
+nnoremap rr Vp
+nnoremap rw viwp
+nnoremap rW viWp
+nnoremap r<Leader>w vep
+nnoremap r<Leader>W vEp
+nnoremap ri" vi"p
+nnoremap ra" va"p
+nnoremap ri' vi'p
+nnoremap ra' va'p
+nnoremap ri} vi}p
+nnoremap ra} va}p
+nnoremap ri{ vi{p
+nnoremap ra{ va{p
+nnoremap ri[ vi[p
+nnoremap ra[ va[p
+nnoremap ri] vi]p
+nnoremap ra] va]p
+nnoremap ri( vi(p
+nnoremap ra( va(p
+nnoremap ri) vi)p
+nnoremap ra) va)p
+nnoremap ri< vi<p
+nnoremap ra> va>p
+nnoremap ra< va<p
+nnoremap ri> vi>p
 
 onoremap w iw
 onoremap W iW
@@ -141,14 +118,12 @@ nnoremap <C-j> :vsc View.NavigateForward<CR>
 "        <C-t> show diagnostic window
 "        <C-n>f (se) create folder
 "        <C-n>i (se) create item
+"        <C-p> :vsc Edit.ParameterInfo<CR>
 
 " Leaders
 nnoremap <Leader>j J
 nnoremap <Leader>l :noh<CR>
 nnoremap <Leader>s :source c:\Users\User\vimfiles\.vimrc<CR>
-
-nnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
-vnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
 
 nnoremap <Leader>p "0p
 nnoremap <Leader>P "0P
@@ -164,21 +139,11 @@ nnoremap <Leader>rn :vsc Refactor.Rename<CR>
 nnoremap <Leader>rr :vsc Debug.Restart<CR>
 nnoremap <Leader>rs :vsc Debug.StopDebugging<CR>
 
-nnoremap <Leader>to :tabo<CR>
-nnoremap <Leader>tk :vsc Window.KeepTabOpen<CR>
+nnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
+vnoremap <Leader>c :vsc Edit.ToggleLineComment<CR>
 
+nnoremap <Leader>ca :tabo<CR>
+nnoremap <Leader>kt :vsc Window.KeepTabOpen<CR>
 
-" Build, Run, Debug, Tests
-nnoremap <Leader>dl :vsc Debug.StepOver<CR>
-nnoremap <Leader>dj :vsc Debug.StepInto<CR>
-nnoremap <Leader>dk :vsc Debug.StepOut<CR>
-nnoremap <Leader>dh :vsc Debug.RunToCursor<CR>
-
-nnoremap <Leader>tt :vsc TestExplorer.ShowTestExplorer<CR>
-nnoremap <Leader>ta :vsc TestExplorer.RunAllTests<CR>
-nnoremap <Leader>tf :vsc TestExplorer.RunFailedTests<CR>
-nnoremap <Leader>tl :vsc TestExplorer.RepeatLastRun<CR>
-nnoremap <Leader>tL :vsc TestExplorer.DebugLastRun<CR>
-
-nnoremap <Leader>db :vsc Debug.ToggleBreakpoint<CR>
-nnoremap <Leader>dc :vsc Debug.DeleteAllBreakpoints<CR>
+nnoremap <Leader>tb :vsc Debug.ToggleBreakpoint<CR>
+nnoremap <Leader>db :vsc Debug.DeleteAllBreakpoints<CR>

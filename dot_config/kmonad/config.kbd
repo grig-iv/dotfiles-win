@@ -33,25 +33,23 @@
 
 (defalias
     lm  (layer-toggle layer-manager)
-	
+
     m   (layer-switch main)
     b   (layer-switch blank)
     n   (layer-switch numpad)
 )
 
 (defalias
-    mod (tap-next esc (layer-toggle main-mod))
-    ea  (tap-next ent lalt)
-    cs  (tap-next caps rsft)
+    mm  (layer-toggle main-mod)
 
-    src (tap-next (around-next rctl) rctl)
-    srs (tap-next (around-next rsft) rsft)
+    la  (tap-next esc lsft)
+    ra  (tap-next ent rctl)
+    ls  bspc
+    rs  @mm
+    cps (tap-next cmp @mm)
 
-    ;; Launcher
-	;;ln  M-p   ;; Linux
-	ln  A-spc   ;; Windows
-
-	;; Windows virtual desctop moves
+    ;; Windows
+    ln  A-spc
     pd  C-M-lft
     nd  C-M-rght
 )
@@ -59,17 +57,17 @@
 (deflayer main
     _     _    _    _    _    _    _    _    _    _    _    _    _    _
     _     _    _    _    _    _    _    _    _    _    _    _    _    _
-    @mod  _    _    _    _    _    _    _    _    _    _    _    _
-    _     _    _    _    _    _    _    _    _    _    _    @srs
-    _     _    @ea            _                   @src @lm  ralt
+    @cps  _    _    _    _    _    _    _    _    _    _    _    _
+    @ls   _    _    _    _    _    _    _    _    _    _    @rs
+    _     _    @la            _                   @ra  @lm  ralt
 )
 
 (deflayer main-mod
     _     _    _    _    end  _    _    _    _    _    home _    _    _
-    @ln   _    _    _    _    _    _    pgup ins  _    _    _    _    _
-    _     _    _    pgdn _    _    lft  down up   rght _    _    _
-    _     _    _    _    _    _    _    _    @pd  @nd  _    @cs
-    _     _    del            bspc                _    _    _
+    @ln   _    {    }    _    _    _    pgup ins  _    _    _    _    _
+    _    \_   \(   \)    =    _    lft  down up   rght _    _    _
+    _     _    _    _    _    _    _    pgdn @pd  @nd  _    _
+    _     _    _              _                  _     _    _
 )
 
 (deflayer layer-manager
