@@ -1,0 +1,15 @@
+set drawbox
+set mouse
+set shellopts '-eu'
+set scrolloff 10
+
+map <enter> shell
+
+# use a and A to create files and directories
+cmd createfile %sh -c 'touch $0'
+cmd createdir %sh -c 'mkdir $0'
+map a push :createfile<space>
+map A push :createdir<space>
+
+# open explorer in current directory
+map S push &start.<enter>

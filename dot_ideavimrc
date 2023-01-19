@@ -13,9 +13,8 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 Plug 'michaeljsmith/vim-indent-object'
-
 """ Plugin settings -------------------------
-let g:argtextobj_pairs="[:],(:),<:>"
+let g:argtextobj_pairs="[:],(:),<:>,{:}"
 
 """ Common settings -------------------------
 set showmode
@@ -31,23 +30,23 @@ onoremap W iW
 onoremap <Leader>w w
 onoremap <Leader>W W
 
-noremap H ^
-map J }
-map K {
-noremap L g_
+noremap $ g_
 
 noremap Y y$
 noremap Q @q
 noremap U <C-r>
 noremap X r
 
+noremap <C-p> "0p
 noremap <C-s> :w<CR>
 
+nnoremap <Leader>; g_a;<Esc>
+nnoremap <Leader>a a <Esc>a
+nnoremap <Leader>i i <Esc>i
 noremap <leader>j J
-noremap <leader>p "0p
-noremap <leader>P "0P
 noremap <leader>tl :noh<CR>
 noremap <Leader>ca :tabo<CR>
+
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -66,10 +65,12 @@ map r gr
 map rr grr
 map R gr$
 
+imap <C-p> <Action>(ParameterInfo)
+
 noremap <C-d> <Nop>
 noremap <C-u> <Nop>
-noremap <Del> <C-d>
-noremap <BS>  <C-u>
+noremap <Cr> <C-u>
+noremap <BS> <C-d>
 
 map ]d <Action>(GotoNextError)
 map [d <Action>(GotoPreviousError)
@@ -80,23 +81,25 @@ map [u <Action>(GotoPreviousElementUnderCaretUsage)
 map ]] <Action>(MethodDown)
 map [[ <Action>(MethodUp)
 
-map <C-h> <Action>(PreviousTab)
-map <C-l> <Action>(NextTab)
+map ( <Action>(PreviousTab)
+map ) <Action>(NextTab)
 map <C-q> <Action>(CloseEditor)
 
-map <C-j> <Action>(Forward)
-map <C-k> <Action>(Back)
+map <C-Down> <Action>(Forward)
+map <C-Up> <Action>(Back)
 
 map <C-m> <Action>(SelectInProjectView)
 map <C-a> <Action>(ShowIntentionActions)
 map <C-r> <Action>(Debug)
 map <C-t> <Action>(ActivateProblemsViewToolWindow)
-map <C-f> <Action>(SearchEverywhere)
+map <C-f> <Action>(GotoClass)
 map <C-i> <Action>(QuickJavaDoc)
+map <C-.> f.
+map <C-,> F.
 
 map <Leader>s :source ~/.ideavimrc<CR>
 map <Leader>rr <Action>(Rerun)
-map <Leader>rs <Action>(Stop)
+map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
 
 map <Leader>rn <Action>(RenameElement)
 map <Leader>rf <Action>(ReformatCode)
@@ -107,5 +110,8 @@ map <Leader>sd <Action>(QuickJavaDoc)
 map <Leader>sp <Action>(ParameterInfo)
 map <Leader>sr <Action>(Refactorings.QuickListPopupAction)
 
+map <Leader>ha <Action>(HideAllWindows)
+
 map <Leader>tb <Action>(ToggleLineBreakpoint)
 map <Leader>th <Action>(ToggleInlayHintsGloballyAction)
+

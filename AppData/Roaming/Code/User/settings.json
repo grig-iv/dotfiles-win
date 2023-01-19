@@ -1,0 +1,21 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "xml.server.binary.trustedHashes": [
+        "34f51b1d8c3b85bf8af72502c3a52ca841d11cf76f848be198631e0dd2b7e169"
+    ],
+    "workbench.colorTheme": "GapStyle VS",
+    "editor.fontFamily": "Fira Code, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+     
+    "gopls": { "ui.semanticTokens": true},
+
+    "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["$"],  
+      "after": ["g", "_"]      
+    },
+  ],
+}

@@ -44,9 +44,9 @@
 
     la  (tap-next esc lsft)
     ra  (tap-next ent rctl)
-    ls  bspc
+    ls  @mm
     rs  @mm
-    cps (tap-next cmp @mm)
+    cps (tap-next bspc lalt)
 
     ;; Windows
     ln  A-spc
@@ -65,8 +65,8 @@
 (deflayer main-mod
     _     _    _    _    end  _    _    _    _    _    home _    _    _
     @ln   _    {    }    _    _    _    pgup ins  _    _    _    _    _
-    _    \_   \(   \)    =    _    lft  down up   rght _    _    _
-    _     _    _    _    _    _    _    pgdn @pd  @nd  _    _
+    del  \_   \(   \)    =    _    lft  down up   rght _    _    _
+    cmp   _    _    _    _    _    _    pgdn @pd  @nd  _    cmp
     _     _    _              _                  _     _    _
 )
 
