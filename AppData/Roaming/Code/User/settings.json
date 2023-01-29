@@ -1,21 +1,131 @@
 {
-    "python.defaultInterpreterPath": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "xml.server.binary.trustedHashes": [
-        "34f51b1d8c3b85bf8af72502c3a52ca841d11cf76f848be198631e0dd2b7e169"
-    ],
     "workbench.colorTheme": "GapStyle VS",
-    "editor.fontFamily": "Fira Code, 'Courier New', monospace",
-    "editor.minimap.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-     
-    "gopls": { "ui.semanticTokens": true},
+    "protoc": {
 
-    "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["$"],  
-      "after": ["g", "_"]      
     },
-  ],
+
+    "terminal.integrated.profiles.windows": {
+         "QMK_MSYS": {
+             "path": "C:/QMK_MSYS/usr/bin/bash.exe",
+             "env": {
+                 "MSYSTEM": "MINGW64",
+                 "CHERE_INVOKING": "1"
+             },
+             "args": ["--login"]
+         }
+     },
+
+     "terminal.integrated.cursorStyle": "line",
+
+    "vim.easymotion": true,
+    "vim.showmodename": true,
+    "vim.replaceWithRegister": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": ["w"],
+            "after": ["i", "w"]
+        },
+        {
+            "before": ["W"],
+            "after": ["i", "W"]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "after": ["w"]
+        },
+        {
+            "before": ["<leader>", "W"],
+            "after": ["W"]
+        },
+    ],
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["J"],
+            "after": ["}"]
+        },
+        {
+            "before": ["K"],
+            "after": ["{"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g", "_"]
+        },
+
+        {
+            "before": ["<tab>"],
+            "after": ["<C-u>"]
+        },
+        {
+            "before": ["<backspace>"],
+            "after": ["<C-d>"]
+        },
+
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<C-a>"],
+            "commands": ["editor.action.quickFix"]
+        },
+
+
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
+            "before": ["Q"],
+            "after": ["@", "q"]
+        },
+        {
+            "before": ["U"],
+            "after": ["<C-r>"]
+        },
+        {
+            "before": ["X"],
+            "after": ["r"]
+        },
+
+        {
+            "before": ["<leader>", "j"],
+            "after": ["J"]
+        },
+
+        {
+            "before": ["r"],
+            "after": ["g", "r"]
+        },
+        {
+            "before": ["r", "r"],
+            "after": ["g", "r", "r"]
+        },
+        {
+            "before": ["R"],
+            "after": ["g", "r", "$"]
+        },
+
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+    ],
+
+    "vim.leader": "<space>",
+    "haskell.manageHLS": "GHCup",
+    "editor.minimap.enabled": false
 }
