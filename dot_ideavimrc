@@ -30,12 +30,18 @@ onoremap W iW
 onoremap <Leader>w w
 onoremap <Leader>W W
 
-noremap $ g_
-
 noremap Y y$
 noremap Q @q
 noremap U <C-r>
 noremap X r
+
+noremap ( b
+noremap ) w
+
+noremap ^ <Nop> 
+noremap $ <Nop> 
+noremap <Home> ^
+noremap <End> g_
 
 noremap <C-p> "0p
 noremap <C-s> :w<CR>
@@ -47,6 +53,14 @@ noremap <leader>j J
 noremap <leader>tl :noh<CR>
 noremap <Leader>ca :tabo<CR>
 
+noremap <C-d> <Nop>
+noremap <C-u> <Nop>
+noremap <PageUp> <C-u>
+noremap <PageDown> <C-d>
+noremap <S-PageUp> <C-f>
+noremap <S-PageDown> <C-b>
+noremap <C-PageUp> gg
+noremap <C-PageDown> G
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -54,7 +68,7 @@ set ideastatusicon=gray
 set idearefactormode=keep
 set clipboard+=ideaput
 
-""" Mappings --------------------------------
+""" Idea mappings --------------------------------
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-sl)
 
@@ -67,11 +81,6 @@ map R gr$
 
 imap <C-p> <Action>(ParameterInfo)
 
-noremap <C-d> <Nop>
-noremap <C-u> <Nop>
-noremap <Cr> <C-u>
-noremap <BS> <C-d>
-
 map ]d <Action>(GotoNextError)
 map [d <Action>(GotoPreviousError)
 map ]b <Action>(GotoNextBookmark)
@@ -81,9 +90,9 @@ map [u <Action>(GotoPreviousElementUnderCaretUsage)
 map ]] <Action>(MethodDown)
 map [[ <Action>(MethodUp)
 
-map ( <Action>(PreviousTab)
-map ) <Action>(NextTab)
-map <C-q> <Action>(CloseEditor)
+map <C-S-Tab> <Action>(PreviousTab)
+map <C-Tab> <Action>(NextTab)
+map <C-w> <Action>(CloseEditor)
 
 map <C-Down> <Action>(Forward)
 map <C-Up> <Action>(Back)
@@ -114,4 +123,3 @@ map <Leader>ha <Action>(HideAllWindows)
 
 map <Leader>tb <Action>(ToggleLineBreakpoint)
 map <Leader>th <Action>(ToggleInlayHintsGloballyAction)
-
