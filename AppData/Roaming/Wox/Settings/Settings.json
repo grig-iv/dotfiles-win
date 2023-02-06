@@ -1,25 +1,20 @@
 {
   "Hotkey": "Alt + Space",
   "Language": "en",
-  "Theme": "System Dark",
-  "QueryBoxFont": "Fira Code Retina",
-  "QueryBoxFontStyle": null,
-  "QueryBoxFontWeight": null,
-  "QueryBoxFontStretch": null,
-  "ResultFont": "Microsoft Sans Serif",
+  "Theme": "Dark",
+  "QueryBoxFont": "FiraCode Nerd Font Retina",
+  "QueryBoxFontStyle": "Normal",
+  "QueryBoxFontWeight": "Normal",
+  "QueryBoxFontStretch": "Normal",
+  "ResultFont": "FiraCode Nerd Font Retina",
   "ResultFontStyle": null,
   "ResultFontWeight": null,
   "ResultFontStretch": null,
-  "ResultHighlightFontStyle": null,
-  "ResultHighlightFontWeight": null,
-  "ResultHighlightFontStretch": null,
-  "ShouldUsePinyin": false,
   "AutoUpdates": true,
-  "UpdateToPrereleases": false,
-  "WindowLeft": 440.0,
-  "WindowTop": 243.5,
+  "WindowLeft": 880.0,
+  "WindowTop": 341.0,
   "MaxResultsToShow": 6,
-  "ActivateTimes": 510,
+  "ActivateTimes": 650,
   "CustomPluginHotkeys": [],
   "Opacity": 1.0,
   "OpacityMode": 0,
@@ -27,7 +22,6 @@
   "EnableUpdateLog": false,
   "StartWoxOnSystemStartup": true,
   "HideOnStartup": true,
-  "HideNotifyIcon": true,
   "LeaveCmdOpen": false,
   "HideWhenDeactive": true,
   "RememberLastLaunchLocation": false,
@@ -43,27 +37,11 @@
   "PluginSettings": {
     "PythonDirectory": null,
     "Plugins": {
-      "CEA0FDFC6D3B4085823D60DC76F28844": {
-        "ID": "CEA0FDFC6D3B4085823D60DC76F28844",
-        "Name": "Hello World CSharp",
-        "ActionKeywords": [
-          "hc"
-        ],
-        "Disabled": true
-      },
       "2f4e384e-76ce-45c3-aea2-b16f5e5c328f": {
         "ID": "2f4e384e-76ce-45c3-aea2-b16f5e5c328f",
         "Name": "Hello World Python",
         "ActionKeywords": [
           "h"
-        ],
-        "Disabled": true
-      },
-      "0ECADE17459B49F587BF81DC3A125110": {
-        "ID": "0ECADE17459B49F587BF81DC3A125110",
-        "Name": "Browser Bookmarks",
-        "ActionKeywords": [
-          "b"
         ],
         "Disabled": false
       },
@@ -162,7 +140,10 @@
           "g",
           "wiki",
           "findicon",
+          "facebook",
+          "twitter",
           "maps",
+          "translate",
           "duckduckgo",
           "github",
           "gist",
@@ -172,10 +153,26 @@
           "stackoverflow",
           "lucky",
           "image",
-          "youtube",
-          "q",
-          "tr",
-          "s"
+          "bing",
+          "yahoo",
+          "bd",
+          "yt"
+        ],
+        "Disabled": false
+      },
+      "FD6F596596184119B027D6D81D0C2742": {
+        "ID": "FD6F596596184119B027D6D81D0C2742",
+        "Name": "Google Translate",
+        "ActionKeywords": [
+          "tr"
+        ],
+        "Disabled": true
+      },
+      "26ce9d10d27c11e488300800200c9a66": {
+        "ID": "26ce9d10d27c11e488300800200c9a66",
+        "Name": "Chocolatey",
+        "ActionKeywords": [
+          "choco"
         ],
         "Disabled": false
       }

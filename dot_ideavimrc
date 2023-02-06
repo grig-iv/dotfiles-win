@@ -12,6 +12,8 @@ set argtextobj
 set easymotion
 set textobj-entire
 set ReplaceWithRegister
+set ReplaceWithRegister
+set quickscope
 Plug 'michaeljsmith/vim-indent-object'
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>,{:}"
@@ -25,42 +27,60 @@ set relativenumber
 set scrolloff=5
 set clipboard=unnamed
 
-onoremap w iw
-onoremap W iW
-onoremap <Leader>w w
-onoremap <Leader>W W
+noremap { <Nop>
+noremap W <Nop>
+noremap B <Nop>
+noremap } <Nop>
+noremap ^ <Nop> 
+noremap $ <Nop> 
+noremap <C-d> <Nop>
+noremap <C-u> <Nop>
 
 noremap Y y$
 noremap Q @q
 noremap U <C-r>
 noremap X r
+nnoremap j J
+nnoremap J kJ
 
-noremap ( b
-noremap ) w
-
-noremap ^ <Nop> 
-noremap $ <Nop> 
 noremap <Home> ^
 noremap <End> g_
 
-noremap <C-p> "0p
-noremap <C-s> :w<CR>
+noremap <S-Left> B
+noremap <S-Down> } 
+noremap <S-Up> {
+noremap <S-Right> W
 
-nnoremap <Leader>; g_a;<Esc>
-nnoremap <Leader>a a <Esc>a
-nnoremap <Leader>i i <Esc>i
-noremap <leader>j J
-noremap <leader>tl :noh<CR>
-noremap <Leader>ca :tabo<CR>
-
-noremap <C-d> <Nop>
-noremap <C-u> <Nop>
 noremap <PageUp> <C-u>
 noremap <PageDown> <C-d>
 noremap <S-PageUp> <C-f>
 noremap <S-PageDown> <C-b>
 noremap <C-PageUp> gg
 noremap <C-PageDown> G
+
+noremap <C-p> "0p
+noremap <C-s> :w<CR>
+noremap <C-.> f.
+noremap <C-,> F.
+
+nnoremap <Leader>; g_a;<Esc>
+nnoremap <Leader>a a <Esc>a
+nnoremap <Leader>i i <Esc>i
+noremap <leader>tl :noh<CR>
+noremap <Leader>ca :tabo<CR>
+
+onoremap w iw
+onoremap W iW
+onoremap <Leader>w w
+onoremap <Leader>W W
+onoremap { a{
+onoremap } i{
+onoremap ( a(
+onoremap ) i(
+onoremap [ a[
+onoremap ] i[
+onoremap < a<
+onoremap > i<
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -69,6 +89,9 @@ set idearefactormode=keep
 set clipboard+=ideaput
 
 """ Idea mappings --------------------------------
+
+map <Leader>s :source ~/.ideavimrc<CR>
+
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-sl)
 
@@ -103,10 +126,7 @@ map <C-r> <Action>(Debug)
 map <C-t> <Action>(ActivateProblemsViewToolWindow)
 map <C-f> <Action>(GotoClass)
 map <C-i> <Action>(QuickJavaDoc)
-map <C-.> f.
-map <C-,> F.
 
-map <Leader>s :source ~/.ideavimrc<CR>
 map <Leader>rr <Action>(Rerun)
 map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
 
