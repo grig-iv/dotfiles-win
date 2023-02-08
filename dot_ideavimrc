@@ -3,7 +3,6 @@ let mapleader=" "
 
 """ Plugins  --------------------------------
 set surround
-set vim-paragraph-motion
 set highlightedyank
 set NERDTree
 set multiple-cursors
@@ -12,44 +11,54 @@ set argtextobj
 set easymotion
 set textobj-entire
 set ReplaceWithRegister
-set ReplaceWithRegister
 set quickscope
-Plug 'michaeljsmith/vim-indent-object'
+set vim-paragraph-motion
+set textobj-indent
+
+
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>,{:}"
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+set keep-english-in-normal
+
 
 """ Common settings -------------------------
-set showmode
-set so=5
 set incsearch
-set nu
 set relativenumber
 set scrolloff=5
 set clipboard=unnamed
 
-noremap { <Nop>
+" nopes
 noremap W <Nop>
 noremap B <Nop>
-noremap } <Nop>
 noremap ^ <Nop> 
 noremap $ <Nop> 
 noremap <C-d> <Nop>
 noremap <C-u> <Nop>
 
-noremap Y y$
-noremap Q @q
-noremap U <C-r>
-noremap X r
-nnoremap j J
-nnoremap J kJ
+" operators
+onoremap w iw
+onoremap W iW
+onoremap iw ]w
+onoremap <Leader>w w
+onoremap <Leader>W W
+onoremap ( a(
+onoremap ) i(
+onoremap { a{
+onoremap } i{
+onoremap [ a[
+onoremap ] i[
+onoremap < a<
+onoremap > i<
+
+" navigation
+noremap <C-Left> B
+noremap <C-Down> }
+noremap <C-Up> {
+noremap <C-Right> W
 
 noremap <Home> ^
 noremap <End> g_
-
-noremap <S-Left> B
-noremap <S-Down> } 
-noremap <S-Up> {
-noremap <S-Right> W
 
 noremap <PageUp> <C-u>
 noremap <PageDown> <C-d>
@@ -58,29 +67,25 @@ noremap <S-PageDown> <C-b>
 noremap <C-PageUp> gg
 noremap <C-PageDown> G
 
-noremap <C-p> "0p
-noremap <C-s> :w<CR>
+" enhance
+noremap Y y$
+noremap Q @q
+noremap U <C-r>
+noremap X r
+noremap j J
+noremap J kJ
+
 noremap <C-.> f.
 noremap <C-,> F.
+noremap <C-p> "0p
+noremap <C-s> :w<CR>
 
-nnoremap <Leader>; g_a;<Esc>
-nnoremap <Leader>a a <Esc>a
-nnoremap <Leader>i i <Esc>i
+noremap <Leader>; g_a;<Esc>
+noremap <Leader>a a <Esc>a
+noremap <Leader>i i <Esc>i
 noremap <leader>tl :noh<CR>
 noremap <Leader>ca :tabo<CR>
 
-onoremap w iw
-onoremap W iW
-onoremap <Leader>w w
-onoremap <Leader>W W
-onoremap { a{
-onoremap } i{
-onoremap ( a(
-onoremap ) i(
-onoremap [ a[
-onoremap ] i[
-onoremap < a<
-onoremap > i<
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -88,9 +93,13 @@ set ideastatusicon=gray
 set idearefactormode=keep
 set clipboard+=ideaput
 
-""" Idea mappings --------------------------------
 
+""" Idea mappings --------------------------------
 map <Leader>s :source ~/.ideavimrc<CR>
+
+map r gr
+map rr grr
+map R gr$
 
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-sl)
@@ -98,34 +107,25 @@ map S <Plug>(easymotion-sl)
 map gt <Action>(GotoTypeDeclaration)
 map gi <Action>(GotoImplementation)
 
-map r gr
-map rr grr
-map R gr$
-
-imap <C-p> <Action>(ParameterInfo)
-
-map ]d <Action>(GotoNextError)
-map [d <Action>(GotoPreviousError)
-map ]b <Action>(GotoNextBookmark)
-map [b <Action>(GotoPreviousBookmark)
-map ]u <Action>(GotoNextElementUnderCaretUsage)
-map [u <Action>(GotoPreviousElementUnderCaretUsage)
-map ]] <Action>(MethodDown)
-map [[ <Action>(MethodUp)
+map <S-Left> <Action>(GotoPreviousError)
+map <S-Down> <Action>(MethodDown)
+map <S-Up> <Action>(MethodUp)
+map <S-Right> <Action>(GotoNextError)
+map <C-S-Down> <Action>(Forward)
+map <C-S-Up> <Action>(Back)
 
 map <C-S-Tab> <Action>(PreviousTab)
 map <C-Tab> <Action>(NextTab)
 map <C-w> <Action>(CloseEditor)
 
-map <C-Down> <Action>(Forward)
-map <C-Up> <Action>(Back)
+map h <Action>(QuickJavaDoc)
+imap <C-h> <Action>(ParameterInfo)
 
 map <C-m> <Action>(SelectInProjectView)
 map <C-a> <Action>(ShowIntentionActions)
 map <C-r> <Action>(Debug)
 map <C-t> <Action>(ActivateProblemsViewToolWindow)
 map <C-f> <Action>(GotoClass)
-map <C-i> <Action>(QuickJavaDoc)
 
 map <Leader>rr <Action>(Rerun)
 map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
@@ -133,6 +133,7 @@ map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
 map <Leader>rn <Action>(RenameElement)
 map <Leader>rf <Action>(ReformatCode)
 
+map <Leader>su <Action>(Switcher)
 map <Leader>su <Action>(ShowUsages)
 map <Leader>se <Action>(ShowErrorDescription)
 map <Leader>sd <Action>(QuickJavaDoc)

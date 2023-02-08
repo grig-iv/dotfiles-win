@@ -3,8 +3,6 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-{ "command": { "action": "sendInput", "input": "\u001b[9;5u" }, "keys": "ctrl+tab" },
-{ "command": { "action": "sendInput", "input": "\u001b[9;6u" }, "keys": "shift+ctrl+tab" },
         {
             "command": 
             {
@@ -42,9 +40,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "FiraCode NF",
-                "size": 13,
-                "weight": "medium"
+                "face": "FiraCode NF"
             },
             "opacity": 100
         },
@@ -69,13 +65,10 @@
                 "name": "Command Prompt"
             },
             {
-                "bellStyle": "window",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-22.04",
-                "guid": "{6f2b3be5-a8bd-4620-b069-4788eea5fb17}",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Linux",
-                "startingDirectory": "~"
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
