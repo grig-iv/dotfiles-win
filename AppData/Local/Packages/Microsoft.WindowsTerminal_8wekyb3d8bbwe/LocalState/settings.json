@@ -12,8 +12,24 @@
             "keys": "ctrl+c"
         },
         {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "\u001b[9;5u"
+            },
+            "keys": "ctrl+tab"
+        },
+        {
             "command": "paste",
             "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "\u001b[9;6u"
+            },
+            "keys": "ctrl+shift+tab"
         },
         {
             "command": "find",
@@ -65,10 +81,17 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "commandline": "ubuntu.exe",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "size": 13.0
+                },
+                "guid": "{88f3f0d8-9aa1-49f6-9057-3bffcbac796b}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
+                "name": "Ubuntu (Copy)",
+                "tabTitle": "Ubuntu"
             }
         ]
     },
@@ -351,5 +374,6 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": true
+    "startOnUserLogin": true,
+    "themes": []
 }

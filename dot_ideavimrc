@@ -18,7 +18,7 @@ set textobj-indent
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>,{:}"
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+"let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 set keep-english-in-normal
 
 
@@ -97,9 +97,9 @@ set clipboard+=ideaput
 """ Idea mappings --------------------------------
 map <Leader>s :source ~/.ideavimrc<CR>
 
-map r gr
-map rr grr
-map R gr$
+noremap r gr
+noremap rr grr
+noremap R gr$
 
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-sl)
