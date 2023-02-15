@@ -18,21 +18,19 @@ set textobj-indent
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>,{:}"
-"let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 set keep-english-in-normal
 
 
 """ Common settings -------------------------
 set incsearch
 set relativenumber
+set numbers
 set scrolloff=5
 set clipboard=unnamed
 
 " nopes
 noremap W <Nop>
 noremap B <Nop>
-noremap ^ <Nop> 
-noremap $ <Nop> 
 noremap <C-d> <Nop>
 noremap <C-u> <Nop>
 
@@ -97,9 +95,12 @@ set clipboard+=ideaput
 """ Idea mappings --------------------------------
 map <Leader>s :source ~/.ideavimrc<CR>
 
-noremap r gr
-noremap rr grr
-noremap R gr$
+map r gr
+map rl grr
+map rc grl
+map rn #*grwn
+map rN #*grwN
+map R gr$
 
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-sl)
@@ -133,8 +134,8 @@ map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
 map <Leader>rn <Action>(RenameElement)
 map <Leader>rf <Action>(ReformatCode)
 
-map <Leader>su <Action>(Switcher)
-map <Leader>su <Action>(ShowUsages)
+map <Leader>gu <Action>(ShowUsages)
+
 map <Leader>se <Action>(ShowErrorDescription)
 map <Leader>sd <Action>(QuickJavaDoc)
 map <Leader>sp <Action>(ParameterInfo)

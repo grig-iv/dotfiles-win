@@ -127,5 +127,6 @@
 
     "vim.leader": "<space>",
     "haskell.manageHLS": "GHCup",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay"
 }
