@@ -12,16 +12,16 @@
             "keys": "ctrl+c"
         },
         {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
             "command": 
             {
                 "action": "sendInput",
                 "input": "\u001b[9;5u"
             },
             "keys": "ctrl+tab"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -92,6 +92,18 @@
                 "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
                 "name": "Ubuntu (Copy)",
                 "tabTitle": "Ubuntu"
+            },
+            {
+                "guid": "{5d3c8e5d-9e02-5021-873b-90f82174c17f}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c4ece371-efec-5dc6-887a-000a4bcbc594}",
+                "hidden": true,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },

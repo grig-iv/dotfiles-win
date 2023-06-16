@@ -60,8 +60,8 @@ noremap <End> g_
 
 noremap <PageUp> <C-u>
 noremap <PageDown> <C-d>
-noremap <S-PageUp> <C-f>
-noremap <S-PageDown> <C-b>
+noremap <S-PageUp> <C-b>
+noremap <S-PageDown> <C-f>
 noremap <C-PageUp> gg
 noremap <C-PageDown> G
 
@@ -84,6 +84,10 @@ noremap <Leader>i i <Esc>i
 noremap <leader>tl :noh<CR>
 noremap <Leader>ca :tabo<CR>
 
+" macros
+inoremap <C-Space>ar _<Space>=><Space>
+inoremap <C-Space>nn !=<Space>null
+
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -102,11 +106,12 @@ map rn #*grwn
 map rN #*grwN
 map R gr$
 
-map s <Plug>(easymotion-s)
-map S <Plug>(easymotion-sl)
+map s <Plug>(easymotion-f)
+map S <Plug>(easymotion-F)
 
 map gt <Action>(GotoTypeDeclaration)
 map gi <Action>(GotoImplementation)
+map <Leader>gr <Action>(ShowUsages)
 
 map <S-Left> <Action>(GotoPreviousError)
 map <S-Down> <Action>(MethodDown)
@@ -132,9 +137,8 @@ map <Leader>rr <Action>(Rerun)
 map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
 
 map <Leader>rn <Action>(RenameElement)
-map <Leader>rf <Action>(ReformatCode)
+map <Leader>fm <Action>(ReformatCode)
 
-map <Leader>gu <Action>(ShowUsages)
 
 map <Leader>se <Action>(ShowErrorDescription)
 map <Leader>sd <Action>(QuickJavaDoc)
