@@ -100,11 +100,11 @@ set clipboard+=ideaput
 map <Leader>s :source ~/.ideavimrc<CR>
 
 map r gr
-map rl grr
-map rc grl
-map rn #*grwn
-map rN #*grwN
-map R gr$
+nmap rr grr
+nmap rc grl
+nmap rn #*grwn
+nmap rN #*grwN
+nmap R gr$
 
 map s <Plug>(easymotion-f)
 map S <Plug>(easymotion-F)
@@ -114,11 +114,11 @@ map gi <Action>(GotoImplementation)
 map <Leader>gr <Action>(ShowUsages)
 
 map <S-Left> <Action>(GotoPreviousError)
-map <S-Down> <Action>(MethodDown)
-map <S-Up> <Action>(MethodUp)
+map <S-Down> <Action>(Forward)
+map <S-Up> <Action>(Back)
 map <S-Right> <Action>(GotoNextError)
-map <C-S-Down> <Action>(Forward)
-map <C-S-Up> <Action>(Back)
+map <C-S-Down> <Action>(MethodDown)
+map <C-S-Up> <Action>(MethodUp)
 
 map <C-S-Tab> <Action>(PreviousTab)
 map <C-Tab> <Action>(NextTab)
@@ -127,18 +127,17 @@ map <C-w> <Action>(CloseEditor)
 map h <Action>(QuickJavaDoc)
 imap <C-h> <Action>(ParameterInfo)
 
-map <C-m> <Action>(SelectInProjectView)
+map <C-e> <Action>(SelectInProjectView)
 map <C-a> <Action>(ShowIntentionActions)
 map <C-r> <Action>(Debug)
 map <C-t> <Action>(ActivateProblemsViewToolWindow)
-map <C-f> <Action>(GotoClass)
+map <C-Space> <Action>(GotoFile)
 
 map <Leader>rr <Action>(Rerun)
-map <Leader>rs <Action>(Stop)<Action>(HideAllWindows)
+map <Leader>rs <Action>(Stop)
 
 map <Leader>rn <Action>(RenameElement)
 map <Leader>fm <Action>(ReformatCode)
-
 
 map <Leader>se <Action>(ShowErrorDescription)
 map <Leader>sd <Action>(QuickJavaDoc)

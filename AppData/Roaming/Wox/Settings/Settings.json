@@ -1,5 +1,5 @@
 {
-  "Hotkey": "Alt + Space",
+  "Hotkey": "Ctrl + Alt + Space",
   "Language": "en",
   "Theme": "System Dark",
   "QueryBoxFont": "Fira Code Retina",
@@ -19,7 +19,7 @@
   "WindowLeft": 440.0,
   "WindowTop": 251.0,
   "MaxResultsToShow": 6,
-  "ActivateTimes": 877,
+  "ActivateTimes": 1002,
   "CustomPluginHotkeys": [],
   "Opacity": 1.0,
   "OpacityMode": 0,
@@ -176,6 +176,14 @@
           "q",
           "tr",
           "s"
+        ],
+        "Disabled": false
+      },
+      "425ADE4AF26A46598A49BDF1DFB0C92D": {
+        "ID": "425ADE4AF26A46598A49BDF1DFB0C92D",
+        "Name": "Random Number Generator",
+        "ActionKeywords": [
+          "rnd"
         ],
         "Disabled": false
       }
