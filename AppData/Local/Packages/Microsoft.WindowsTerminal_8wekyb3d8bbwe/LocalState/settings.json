@@ -70,7 +70,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "FiraCode NF"
+                "face": "JetBrainsMono Nerd Font"
             },
             "opacity": 100,
             "useAcrylic": true
@@ -81,10 +81,6 @@
                 "colorScheme": "Andromeda",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "elevate": true,
-                "font": 
-                {
-                    "face": "FiraCode NF"
-                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
@@ -98,28 +94,11 @@
             {
                 "commandline": "ubuntu.exe",
                 "cursorShape": "filledBox",
-                "font": 
-                {
-                    "face": "JetBrainsMono NF",
-                    "size": 13.0
-                },
                 "guid": "{88f3f0d8-9aa1-49f6-9057-3bffcbac796b}",
                 "hidden": false,
                 "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
                 "name": "Ubuntu (Copy)",
                 "tabTitle": "Ubuntu"
-            },
-            {
-                "guid": "{5d3c8e5d-9e02-5021-873b-90f82174c17f}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{c4ece371-efec-5dc6-887a-000a4bcbc594}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -402,7 +381,7 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": true,
+    "startOnUserLogin": false,
     "themes": 
     [
         {

@@ -28,6 +28,9 @@ set numbers
 set scrolloff=5
 set clipboard=unnamed
 
+set visualbell
+set noerrorbells
+
 " nopes
 noremap W <Nop>
 noremap B <Nop>

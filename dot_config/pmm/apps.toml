@@ -1,0 +1,44 @@
+[shared]
+scoop = [
+  git
+  neovim
+  neovide
+  gcc
+  chezmoi
+  age
+  lsd
+  wox
+  vscodium
+  windirstat
+  alacritty
+  qmk-toolbox
+]
+
+winget = [
+  Mozilla.Firefox
+  mcmilk.7zip-zstd
+  voidtools.Everything
+  SumatraPDF.SumatraPDF
+  GIMP.GIMP
+  ShareX.ShareX
+  Obsidian.Obsidian
+]
+
+[home]
+winget = [
+  Spotify.Spotify
+  Valve.Steam
+  Discord.Discord
+  Telegram.TelegramDesktop
+  Inkscape.Inkscape
+]
+
+chocolatey = [
+  redshift
+]
+
+[work]
+scoop = [
+  mattermost
+  tortoisesvn
+]
