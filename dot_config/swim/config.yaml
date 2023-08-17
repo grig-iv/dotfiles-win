@@ -1,0 +1,41 @@
+SwimManager:
+  Bindings:
+    - { Mods: Alt|Control|Shift, Key: Q, Command: Exit }
+    - { Mods: Alt|Control|Shift, Key: R, Command: ReloadConfig }
+
+
+WorkspaceManager:
+  Workspaces:
+    - Name: WEB
+      Windows:
+        - Process: firefox
+        - Process: brave
+    - Name: DEV
+      Windows:
+        - Process: rider64
+        - Process: code
+        - Process: neovide
+    - Name: SYS
+      Windows:
+        - Process: alacritty
+        - Process: windowsTerminal
+    - Name: MSG
+      Windows:
+        - Process: telegram
+        - Process: mattermost
+        - Process: discord
+    - Name: MND
+      Windows:
+        - Process: obsidian
+  Bindings:
+    - { Mods: Windows|Control, Key: PageUp, Command: PrevWorkspace }
+    - { Mods: Windows|Control, Key: PageDown, Command: NextWorkspace }
+    - { Mods: Windows|Control, Key: Up, Command: PrevWindow }
+    - { Mods: Windows|Control, Key: Down, Command: NextWindow }
+
+
+WindowManager:
+  Bindings:
+    - { Mods: Windows|Control, Key: W, Command: Close }
+    # - { Mods: Alt|Control, Key: ',', Command: Maximize }
+    # - { Mods: Alt|Control, Key: '.', Command: Minimize }

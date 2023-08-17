@@ -31,6 +31,7 @@ winget = [
   Discord.Discord
   Telegram.TelegramDesktop
   Inkscape.Inkscape
+  Brave.Brave
 ]
 
 chocolatey = [
