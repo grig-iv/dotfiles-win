@@ -28,10 +28,10 @@ WorkspaceManager:
       Windows:
         - Process: obsidian
   Bindings:
-    - { Mods: Windows|Control, Key: PageUp, Command: PrevWorkspace }
-    - { Mods: Windows|Control, Key: PageDown, Command: NextWorkspace }
-    - { Mods: Windows|Control, Key: Up, Command: PrevWindow }
-    - { Mods: Windows|Control, Key: Down, Command: NextWindow }
+    - { Mods: Windows|Alt, Key: PageUp, Command: PrevWorkspace }
+    - { Mods: Windows|Alt, Key: PageDown, Command: NextWorkspace }
+    - { Mods: Windows|Alt|Control, Key: E, Command: PrevWindow }
+    - { Mods: Windows|Alt|Control, Key: I, Command: NextWindow }
 
 
 WindowManager:
